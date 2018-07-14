@@ -1,108 +1,50 @@
-import expect from 'expect';
-import { createStore } from 'redux';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Immutable from 'immutable';
+const state = {
+  player: ['O', 'X'],
+  currentPlayer: 0, 
+  pos: [[0,0,0],[0,0,0],[0,0,0]]
+};
 
-// Javascript the good parts
+const render = lState => {
+  const title = document.createElement('h1');
+  title.innerHTML = 'TOTITO';
 
-const Counter = ({ value, incrementAction, decrementAction, removeAction }) => (
-  <div>
-    <h1>{ value }</h1>
-    <button onClick={ incrementAction }>+</button>
-    <button onClick={ decrementAction }>-</button>
-    <button onClick={ removeAction }>x</button>
-  </div>
-);
+  const grid = document.createElement('div');
+  grid.className= 'grid';
 
-const CounterList = ({ list }) => (
-  <div>
-    {
-      list.map(
-        (value, i) => (
-          <Counter
-            key={ i }
-            value={ value }
-            index={ i }
-            incrementAction={
-              () => store.dispatch({
-                type: 'INCREMENT',
-                payload: { index: i }
-              })
-            }
-            decrementAction={
-              () => store.dispatch({
-                type: 'DECREMENT',
-                payload: { index: i }
-              })
-            }
-            removeAction={
-              () => store.dispatch({
-                type: 'REMOVE_COUNTER',
-                payload: {
-                  index: i
-                }
-              })
-            }
-          />
-        )
-      )
-    }
-    <button onClick={ () => store.dispatch({ type: 'ADD_COUNTER' }) }>Add counter</button>
-  </div>
-);
+  root.appendChild(title);
+  root.appendChild(grid);
 
-const validateIndex = (index, list) => 0 <= index && index < list.size;
+  //Totito grid elements
+  const g1 = document.createElement('div');
+  g1.className = 'g1';
+  const g2 = document.createElement('div');
+  g2.className = 'g2';
+  const g3 = document.createElement('div');
+  g3.className = 'g3';
+  const g4 = document.createElement('div');
+  g4.className = 'g4';
+  const g5 = document.createElement('div');
+  g5.className = 'g5';
+  const g6 = document.createElement('div');
+  g6.className = 'g6';
+  const g7 = document.createElement('div');
+  g7.className = 'g7';
+  const g8 = document.createElement('div');
+  g8.className = 'g8';
+  const g9 = document.createElement('div');
+  g9.className = 'g9';
 
-// Reducer
-const counterList = (state = Immutable.List.of(), action) => {
+  //Adding grid elements
+  grid.appendChild(g1);
+  grid.appendChild(g2);
+  grid.appendChild(g3);
+  grid.appendChild(g4);
+  grid.appendChild(g5);
+  grid.appendChild(g6);
+  grid.appendChild(g7);
+  grid.appendChild(g8);
+  grid.appendChild(g9);
 
-  if(typeof action.payload !== 'undefined'){
-    var { index } = action.payload;
-  }
-
-  switch(action.type){
-    case 'ADD_COUNTER':
-      return state.push(0);
-
-    case 'REMOVE_COUNTER':
-
-      if(validateIndex(index, state)){
-        return state.delete(index);
-      }
-
-      return state;
-
-    case 'INCREMENT':
-
-      if(validateIndex(index, state)){
-        return state.update(index, (v) => v + 1);
-      }
-
-      return state;
-
-    case 'DECREMENT':
-
-      if(validateIndex(index, state)){
-        return state.update(index,  (v) => v - 1);
-      }
-
-      return state;
-
-    default:
-      return state;
-  }
 }
 
-// createStore: reducer --> store
-const store = createStore(counterList);
-
-const render = () => {
-  ReactDOM.render(
-    <CounterList list={ store.getState() } />,
-    document.getElementById('root')
-  )
-}
-
-store.subscribe(render);
-render();
+render(state);

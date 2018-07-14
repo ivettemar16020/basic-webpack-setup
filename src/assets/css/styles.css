@@ -1,0 +1,94 @@
+body {
+    background: bisque;
+  }
+  
+  h1 {
+    margin-top: 1rem;
+    margin-left: 4rem;
+  }
+  
+  .grid {
+    background: black;
+    display: flex; 
+    flex-direction: row;
+    flex-flow: row wrap;
+    flex-wrap: wrap;
+    height: 21rem;
+    margin-left: 4rem;
+    padding: 0rem;
+    width: 30rem;
+  }
+
+.g1{
+    border-style: dashed;
+    box-sizing: border-box;
+    color: aquamarine;
+    height: 7rem;
+    width: 10rem;
+}
+
+.g2{
+    border-style: dashed;
+    box-sizing: border-box;
+    color: aquamarine;
+    height: 7rem;
+    width: 10rem;
+}
+
+.g3{
+    border-style: dashed;
+    box-sizing: border-box;
+    color: aquamarine;
+    height: 7rem;
+    width: 10rem;
+}
+
+.g4{
+    border-style: dashed;
+    box-sizing: border-box;
+    color: aquamarine;
+    height: 7rem;
+    width: 10rem;
+}
+
+.g5{
+    border-style: dashed;
+    box-sizing: border-box;
+    color: aquamarine;
+    height: 7rem;
+    width: 10rem;
+}
+
+.g6{
+    border-style: dashed;
+    box-sizing: border-box;
+    color: aquamarine;
+    height: 7rem;
+    width: 10rem;
+}
+
+.g7{
+    border-style: dashed;
+    box-sizing: border-box;
+    color: aquamarine;
+    height: 7rem;
+    width: 10rem;
+}
+
+.g8{
+    border-style: dashed;
+    box-sizing: border-box;
+    color: aquamarine;
+    height: 7rem;
+    width: 10rem;
+}
+
+.g9{
+    border-style: dashed;
+    box-sizing: border-box;
+    color: aquamarine;
+    height: 7rem;
+    width: 10rem;
+}
+  
+ 
