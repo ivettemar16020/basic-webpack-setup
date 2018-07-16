@@ -86,183 +86,201 @@ const render = lState =>  {
   
   //Mechanics
   g1.onclick = () => {
-    if(sectX1 == 0 && sectO1 == 0){
-      if(lState.player[lState.currentPlayer] == "X"){
-        g1.classList.add('XPlayer');    
-        lState.currentPlayer = 1;
-        sectX1 = 1;
-        flagX++;
-        console.log('X');
+    if(lState.win == false){
+      if(sectX1 == 0 && sectO1 == 0){
+        if(lState.player[lState.currentPlayer] == "X"){
+          g1.classList.add('XPlayer');    
+          lState.currentPlayer = 1;
+          sectX1 = 1;
+          flagX++;
+          console.log('X');
+        }else{
+          g1.classList.add('XPlayer');    
+          lState.currentPlayer = 0;
+          sectO1 = 1;
+          console.log('O');
+        }   
       }else{
-        g1.classList.add('XPlayer');    
-        lState.currentPlayer = 0;
-        sectO1 = 1;
-        console.log('O');
-      }   
-    }else{
-      alert('Not available');
-    }  
-    winner();
+        alert('Not available');
+      }  
+      winner();
+    }
   };
 
   g2.onclick = () => {
-    if(sectX2 == 0 && sectO2 == 0){
-      if(lState.player[lState.currentPlayer] == "X"){
-        g2.classList.add('XPlayer');    
-        lState.currentPlayer = 1;
-        sectX2 = 1;
-        flagX++;
-        console.log('X');
+    if(lState.win == false){
+      if(sectX2 == 0 && sectO2 == 0){
+        if(lState.player[lState.currentPlayer] == "X"){
+          g2.classList.add('XPlayer');    
+          lState.currentPlayer = 1;
+          sectX2 = 1;
+          flagX++;
+          console.log('X');
+        }else{
+          g2.classList.add('OPlayer');    
+          lState.currentPlayer = 0;
+          sectO2 = 1;
+          console.log('O');
+        }   
       }else{
-        g2.classList.add('OPlayer');    
-        lState.currentPlayer = 0;
-        sectO2 = 1;
-        console.log('O');
-      }   
-    }else{
-      alert('Not available');
-    }  
-    winner();
+        alert('Not available');
+      }  
+      winner();
+    }
   };
 
   g3.onclick = () => {
-    if(sectX3 == 0 && sectO3 == 0){
-      if(lState.player[lState.currentPlayer] == "X"){
-        g3.classList.add('XPlayer');    
-        lState.currentPlayer = 1;
-        sectX3 = 1;
-        flagX++;
-        console.log('X');
+    if(lState.win == false){
+      if(sectX3 == 0 && sectO3 == 0){
+        if(lState.player[lState.currentPlayer] == "X"){
+          g3.classList.add('XPlayer');    
+          lState.currentPlayer = 1;
+          sectX3 = 1;
+          flagX++;
+          console.log('X');
+        }else{
+          g3.classList.add('OPlayer');    
+          lState.currentPlayer = 0;
+          sectO3 = 1;
+          console.log('O');
+        }   
       }else{
-        g3.classList.add('OPlayer');    
-        lState.currentPlayer = 0;
-        sectO3 = 1;
-        console.log('O');
-      }   
-    }else{
-      alert('Not available');
-    }  
-    winner();
+        alert('Not available');
+      }  
+      winner();
+    }
   };
 
   g4.onclick = () => {
-    if(sectX4 == 0 && sectO4 == 0){
-      if(lState.player[lState.currentPlayer] == "X"){
-        g4.classList.add('XPlayer');    
-        lState.currentPlayer = 1;
-        sectX4 = 1;
-        flagX++;
-        console.log('X');
+    if(lState.win == false){
+      if(sectX4 == 0 && sectO4 == 0){
+        if(lState.player[lState.currentPlayer] == "X"){
+          g4.classList.add('XPlayer');    
+          lState.currentPlayer = 1;
+          sectX4 = 1;
+          flagX++;
+          console.log('X');
+        }else{
+          g4.classList.add('OPlayer');    
+          lState.currentPlayer = 0;
+          sectO4 = 1;
+          console.log('O');
+        }   
       }else{
-        g4.classList.add('OPlayer');    
-        lState.currentPlayer = 0;
-        sectO4 = 1;
-        console.log('O');
-      }   
-    }else{
-      alert('Not available');
-    }  
-    winner();
+        alert('Not available');
+      }  
+      winner();
+    }
   };
 
   g5.onclick = () => {
-    if(sectX5 == 0 && sectO5 == 0){
-      if(lState.player[lState.currentPlayer] == "X"){
-        g5.classList.add('XPlayer');    
-        lState.currentPlayer = 1;
-        sectX5 = 1;
-        flagX++;
-        console.log('X');
+    if(lState.win == false){
+      if(sectX5 == 0 && sectO5 == 0){
+        if(lState.player[lState.currentPlayer] == "X"){
+          g5.classList.add('XPlayer');    
+          lState.currentPlayer = 1;
+          sectX5 = 1;
+          flagX++;
+          console.log('X');
+        }else{
+          g5.classList.add('OPlayer');    
+          lState.currentPlayer = 0;
+          sectO5 = 1;
+          console.log('O');
+        }   
       }else{
-        g5.classList.add('OPlayer');    
-        lState.currentPlayer = 0;
-        sectO5 = 1;
-        console.log('O');
-      }   
-    }else{
-      alert('Not available');
-    }  
-    winner();
+        alert('Not available');
+      }  
+      winner();
+    }
   };
 
   g6.onclick = () => {
-    if(sectX6 == 0 && sectO6 == 0){
-      if(lState.player[lState.currentPlayer] == "X"){
-        g6.classList.add('XPlayer');    
-        lState.currentPlayer = 1;
-        sectX6 = 1;
-        flagX++;
-        console.log('X');
+    if(lState.win == false){
+      if(sectX6 == 0 && sectO6 == 0){
+        if(lState.player[lState.currentPlayer] == "X"){
+          g6.classList.add('XPlayer');    
+          lState.currentPlayer = 1;
+          sectX6 = 1;
+          flagX++;
+          console.log('X');
+        }else{
+          g6.classList.add('OPlayer');    
+          lState.currentPlayer = 0;
+          sectO6 = 1;
+          console.log('O');
+        }   
       }else{
-        g6.classList.add('OPlayer');    
-        lState.currentPlayer = 0;
-        sectO6 = 1;
-        console.log('O');
-      }   
-    }else{
-      alert('Not available');
-    }  
-    winner();
+        alert('Not available');
+      }  
+      winner();
+    }
   };
 
   g7.onclick = () => {
-    if(sectX7 == 0 && sectO7 == 0){
-      if(lState.player[lState.currentPlayer] == "X"){
-        g7.classList.add('XPlayer');    
-        lState.currentPlayer = 1;
-        sectX7 = 1;
-        flagX++;
-        console.log('X');
+    if(lState.win == false){
+      if(sectX7 == 0 && sectO7 == 0){
+        if(lState.player[lState.currentPlayer] == "X"){
+          g7.classList.add('XPlayer');    
+          lState.currentPlayer = 1;
+          sectX7 = 1;
+          flagX++;
+          console.log('X');
+        }else{
+          g7.classList.add('OPlayer');    
+          lState.currentPlayer = 0;
+          sectO7 = 1;
+          console.log('O');
+        }   
       }else{
-        g7.classList.add('OPlayer');    
-        lState.currentPlayer = 0;
-        sectO7 = 1;
-        console.log('O');
-      }   
-    }else{
-      alert('Not available');
-    }  
-    winner();
+        alert('Not available');
+      }  
+      winner();
+    }
   };
 
   g8.onclick = () => {
-    if(sectX8 == 0 && sectO8 == 0){
-      if(lState.player[lState.currentPlayer] == "X"){
-        g8.classList.add('XPlayer');    
-        lState.currentPlayer = 1;
-        sectX8 = 1;
-        flagX++;
-        console.log('X');
+    if(lState.win == false){
+      if(sectX8 == 0 && sectO8 == 0){
+        if(lState.player[lState.currentPlayer] == "X"){
+          g8.classList.add('XPlayer');    
+          lState.currentPlayer = 1;
+          sectX8 = 1;
+          flagX++;
+          console.log('X');
+        }else{
+          g8.classList.add('OPlayer');    
+          lState.currentPlayer = 0;
+          sectO8 = 1;
+          console.log('O');
+        }   
       }else{
-        g8.classList.add('OPlayer');    
-        lState.currentPlayer = 0;
-        sectO8 = 1;
-        console.log('O');
-      }   
-    }else{
-      alert('Not available');
-    }  
-    winner();
+        alert('Not available');
+      }  
+      winner();
+    }
   };
 
   g9.onclick = () => {
-    if(sectX9 == 0 && sectO9 == 0){
-      if(lState.player[lState.currentPlayer] == "X"){
-        g9.classList.add('XPlayer');    
-        lState.currentPlayer = 1;
-        sectX9 = 1;
-        flagX++;
-        console.log('X');
+    if(lState.win == false){
+      if(sectX9 == 0 && sectO9 == 0){
+        if(lState.player[lState.currentPlayer] == "X"){
+          g9.classList.add('XPlayer');    
+          lState.currentPlayer = 1;
+          sectX9 = 1;
+          flagX++;
+          console.log('X');
+        }else{
+          g9.classList.add('OPlayer');    
+          lState.currentPlayer = 0;
+          sectO9 = 1;
+          console.log('O');
+        }   
       }else{
-        g9.classList.add('OPlayer');    
-        lState.currentPlayer = 0;
-        sectO9 = 1;
-        console.log('O');
-      }   
-    }else{
-      alert('Not available');
-    }  
-    winner();
+        alert('Not available');
+      }  
+      winner();
+    }
   };
 
   //Winner? 
@@ -278,6 +296,7 @@ const render = lState =>  {
     }
     if((lState.win == false) && (flagX >= 5)){
       alert('Tie');
+      lState.win = true;
     }
   }
 
