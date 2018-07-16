@@ -16,8 +16,10 @@ const render = lState =>  {
   const grid = document.createElement('div');
   grid.className= 'grid';
 
+  let turPlay = lState.currentPlayer;
   const info = document.createElement('h2'); 
   info.innerHTML = (`It's player ${lState.player[lState.currentPlayer]}'s turn`)
+  console.log(lState.player[lState.currentPlayer]);
 
   //Button
   const reBtn = document.createElement('button');
@@ -98,6 +100,7 @@ const render = lState =>  {
     }else{
       alert('Not available');
     }  
+    winner();
   };
 
   g2.onclick = () => {
@@ -116,6 +119,7 @@ const render = lState =>  {
     }else{
       alert('Not available');
     }  
+    winner();
   };
 
   g3.onclick = () => {
@@ -134,6 +138,7 @@ const render = lState =>  {
     }else{
       alert('Not available');
     }  
+    winner();
   };
 
   g4.onclick = () => {
@@ -152,6 +157,7 @@ const render = lState =>  {
     }else{
       alert('Not available');
     }  
+    winner();
   };
 
   g5.onclick = () => {
@@ -170,6 +176,7 @@ const render = lState =>  {
     }else{
       alert('Not available');
     }  
+    winner();
   };
 
   g6.onclick = () => {
@@ -188,6 +195,7 @@ const render = lState =>  {
     }else{
       alert('Not available');
     }  
+    winner();
   };
 
   g7.onclick = () => {
@@ -206,6 +214,7 @@ const render = lState =>  {
     }else{
       alert('Not available');
     }  
+    winner();
   };
 
   g8.onclick = () => {
@@ -224,6 +233,7 @@ const render = lState =>  {
     }else{
       alert('Not available');
     }  
+    winner();
   };
 
   g9.onclick = () => {
@@ -242,12 +252,27 @@ const render = lState =>  {
     }else{
       alert('Not available');
     }  
+    winner();
   };
+
+  //Winner? 
+  function winner(){
+    //X: 
+    if ((sectX1 == 1 && sectX2 == 1 && sectX3 == 1) || (sectX1 == 1 && sectX4 == 1 && sectX7 == 1) || (sectX7 == 1 && sectX5 == 1 && sectX3 == 1) || (sectX3 == 1 && sectX6 == 1 && sectX9 == 1) || (sectX7 == 1 && sectX8 == 1 && sectX9 == 1) || (sectX1 == 1 && sectX5 == 1 && sectX9 == 1) || (sectX4 == 1 && sectX5 == 1 && sectX6 == 1) || (sectX2 == 1 && sectX5 == 1 && sectX8 == 1)){
+      alert('Player X is the winner');
+      lState.win = true; 
+    }
+    if ((sectO1 == 1 && sectO2 == 1 && sectO3 == 1) || (sectO1 == 1 && sectO4 == 1 && sectO7 == 1) || (sectO7 == 1 && sectO5 == 1 && sectO3 == 1) || (sectO3 == 1 && sectO6 == 1 && sectO9 == 1) || (sectO7 == 1 && sectO8 == 1 && sectO9 == 1) || (sectO1 == 1 && sectO5 == 1 && sectO9 == 1) || (sectO4 == 1 && sectO5 == 1 && sectO6 == 1) || (sectO2 == 1 && sectO5 == 1 && sectO8 == 1)){
+      alert('Player O is the winner');
+      lState.win = true; 
+    }
+  }
 
   //Reload the game
   reBtn.onclick = () => {
-    //alert('You reoladed the game')
-    //sectO1 = false, sectX1 = false;
+    //alert('You reloaded the game');
+    lState.currentPlayer = 0;
+    lState.win = false;
     render(lState);
   };
 }
