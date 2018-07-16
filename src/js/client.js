@@ -1,38 +1,53 @@
 const state = {
-  player: ['O', 'X'],
+  player: ['X', 'O'],
   currentPlayer: 0, 
-  pos: [[0,0,0],[0,0,0],[0,0,0]]
+  win: false
 };
 
-const render = lState => {
+const render = lState =>  {
+  // Clear previous root content
+  if (root.hasChildNodes()) {
+    root.innerHTML = null;
+  }
+  
   const title = document.createElement('h1');
   title.innerHTML = 'TOTITO';
 
   const grid = document.createElement('div');
   grid.className= 'grid';
 
+  const info = document.createElement('h2'); 
+  info.innerHTML = (`It's player ${lState.player[lState.currentPlayer]}'s turn`)
+
+  //Button
+  const reBtn = document.createElement('button');
+  reBtn.className = 'reBtn';
+  reBtn.innerHTML = 'Reload';
+
   root.appendChild(title);
   root.appendChild(grid);
+  root.appendChild(info);
+  root.appendChild(reBtn);
 
   //Totito grid elements
   const g1 = document.createElement('div');
-  g1.className = 'g1';
+  g1.className = 'g';
   const g2 = document.createElement('div');
-  g2.className = 'g2';
+  g2.className = 'g';
   const g3 = document.createElement('div');
-  g3.className = 'g3';
+  g3.className = 'g';
   const g4 = document.createElement('div');
-  g4.className = 'g4';
+  g4.className = 'g';
   const g5 = document.createElement('div');
-  g5.className = 'g5';
+  g5.className = 'g';
   const g6 = document.createElement('div');
-  g6.className = 'g6';
+  g6.className = 'g';
   const g7 = document.createElement('div');
-  g7.className = 'g7';
+  g7.className = 'g';
   const g8 = document.createElement('div');
-  g8.className = 'g8';
+  g8.className = 'g';
   const g9 = document.createElement('div');
-  g9.className = 'g9';
+  g9.className = 'g';
 
   //Adding grid elements
   grid.appendChild(g1);
@@ -45,6 +60,196 @@ const render = lState => {
   grid.appendChild(g8);
   grid.appendChild(g9);
 
+  //Sectors: X and O 
+  //const cannot be re-assigned
+  let sectX1 = 0 
+  , sectX2 = 0
+  , sectX3 = 0
+  , sectX4 = 0
+  , sectX5 = 0
+  , sectX6 = 0
+  , sectX7 = 0
+  , sectX8 = 0
+  , sectX9 = 0
+  , sectO1 = 0
+  , sectO2 = 0
+  , sectO3 = 0
+  , sectO4 = 0
+  , sectO5 = 0
+  , sectO6 = 0
+  , sectO7 = 0
+  , sectO8 = 0
+  , sectO9 = 0; 
+  
+  //Mechanics
+  g1.onclick = () => {
+    if(sectX1 == 0 && sectO1 == 0){
+      if(lState.player[lState.currentPlayer] == "X"){
+        g1.classList.add('XPlayer');    
+        lState.currentPlayer = 1;
+        sectX1 = 1;
+        console.log('X');
+      }else{
+        g1.classList.add('XPlayer');    
+        lState.currentPlayer = 0;
+        sectO1 = 1;
+        console.log('O');
+      }   
+    }else{
+      alert('Not available');
+    }  
+  };
+
+  g2.onclick = () => {
+    if(sectX2 == 0 && sectO2 == 0){
+      if(lState.player[lState.currentPlayer] == "X"){
+        g2.classList.add('XPlayer');    
+        lState.currentPlayer = 1;
+        sectX2 = 1;
+        console.log('X');
+      }else{
+        g2.classList.add('OPlayer');    
+        lState.currentPlayer = 0;
+        sectO2 = 1;
+        console.log('O');
+      }   
+    }else{
+      alert('Not available');
+    }  
+  };
+
+  g3.onclick = () => {
+    if(sectX3 == 0 && sectO3 == 0){
+      if(lState.player[lState.currentPlayer] == "X"){
+        g3.classList.add('XPlayer');    
+        lState.currentPlayer = 1;
+        sectX3 = 1;
+        console.log('X');
+      }else{
+        g3.classList.add('OPlayer');    
+        lState.currentPlayer = 0;
+        sectO3 = 1;
+        console.log('O');
+      }   
+    }else{
+      alert('Not available');
+    }  
+  };
+
+  g4.onclick = () => {
+    if(sectX4 == 0 && sectO4 == 0){
+      if(lState.player[lState.currentPlayer] == "X"){
+        g4.classList.add('XPlayer');    
+        lState.currentPlayer = 1;
+        sectX4 = 1;
+        console.log('X');
+      }else{
+        g4.classList.add('OPlayer');    
+        lState.currentPlayer = 0;
+        sectO4 = 1;
+        console.log('O');
+      }   
+    }else{
+      alert('Not available');
+    }  
+  };
+
+  g5.onclick = () => {
+    if(sectX5 == 0 && sectO5 == 0){
+      if(lState.player[lState.currentPlayer] == "X"){
+        g5.classList.add('XPlayer');    
+        lState.currentPlayer = 1;
+        sectX5 = 1;
+        console.log('X');
+      }else{
+        g5.classList.add('OPlayer');    
+        lState.currentPlayer = 0;
+        sectO5 = 1;
+        console.log('O');
+      }   
+    }else{
+      alert('Not available');
+    }  
+  };
+
+  g6.onclick = () => {
+    if(sectX6 == 0 && sectO6 == 0){
+      if(lState.player[lState.currentPlayer] == "X"){
+        g6.classList.add('XPlayer');    
+        lState.currentPlayer = 1;
+        sectX6 = 1;
+        console.log('X');
+      }else{
+        g6.classList.add('OPlayer');    
+        lState.currentPlayer = 0;
+        sectO6 = 1;
+        console.log('O');
+      }   
+    }else{
+      alert('Not available');
+    }  
+  };
+
+  g7.onclick = () => {
+    if(sectX7 == 0 && sectO7 == 0){
+      if(lState.player[lState.currentPlayer] == "X"){
+        g7.classList.add('XPlayer');    
+        lState.currentPlayer = 1;
+        sectX7 = 1;
+        console.log('X');
+      }else{
+        g7.classList.add('OPlayer');    
+        lState.currentPlayer = 0;
+        sectO7 = 1;
+        console.log('O');
+      }   
+    }else{
+      alert('Not available');
+    }  
+  };
+
+  g8.onclick = () => {
+    if(sectX8 == 0 && sectO8 == 0){
+      if(lState.player[lState.currentPlayer] == "X"){
+        g8.classList.add('XPlayer');    
+        lState.currentPlayer = 1;
+        sectX8 = 1;
+        console.log('X');
+      }else{
+        g8.classList.add('OPlayer');    
+        lState.currentPlayer = 0;
+        sectO8 = 1;
+        console.log('O');
+      }   
+    }else{
+      alert('Not available');
+    }  
+  };
+
+  g9.onclick = () => {
+    if(sectX9 == 0 && sectO9 == 0){
+      if(lState.player[lState.currentPlayer] == "X"){
+        g9.classList.add('XPlayer');    
+        lState.currentPlayer = 1;
+        sectX9 = 1;
+        console.log('X');
+      }else{
+        g9.classList.add('OPlayer');    
+        lState.currentPlayer = 0;
+        sectO9 = 1;
+        console.log('O');
+      }   
+    }else{
+      alert('Not available');
+    }  
+  };
+
+  //Reload the game
+  reBtn.onclick = () => {
+    //alert('You reoladed the game')
+    //sectO1 = false, sectX1 = false;
+    render(lState);
+  };
 }
 
 render(state);
