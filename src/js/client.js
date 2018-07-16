@@ -276,7 +276,7 @@ const render = lState =>  {
       alert('Player O is the winner');
       lState.win = true; 
     }
-    if(flagX >= 5){
+    if(flagX >= 5 && (lState.win = false)){
       alert('Tie');
     }
   }
