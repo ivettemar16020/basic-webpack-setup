@@ -81,7 +81,8 @@ const render = lState =>  {
   , sectO6 = 0
   , sectO7 = 0
   , sectO8 = 0
-  , sectO9 = 0; 
+  , sectO9 = 0
+  , flagX = 0;
   
   //Mechanics
   g1.onclick = () => {
@@ -90,6 +91,7 @@ const render = lState =>  {
         g1.classList.add('XPlayer');    
         lState.currentPlayer = 1;
         sectX1 = 1;
+        flagX++;
         console.log('X');
       }else{
         g1.classList.add('XPlayer');    
@@ -109,6 +111,7 @@ const render = lState =>  {
         g2.classList.add('XPlayer');    
         lState.currentPlayer = 1;
         sectX2 = 1;
+        flagX++;
         console.log('X');
       }else{
         g2.classList.add('OPlayer');    
@@ -128,6 +131,7 @@ const render = lState =>  {
         g3.classList.add('XPlayer');    
         lState.currentPlayer = 1;
         sectX3 = 1;
+        flagX++;
         console.log('X');
       }else{
         g3.classList.add('OPlayer');    
@@ -147,6 +151,7 @@ const render = lState =>  {
         g4.classList.add('XPlayer');    
         lState.currentPlayer = 1;
         sectX4 = 1;
+        flagX++;
         console.log('X');
       }else{
         g4.classList.add('OPlayer');    
@@ -166,6 +171,7 @@ const render = lState =>  {
         g5.classList.add('XPlayer');    
         lState.currentPlayer = 1;
         sectX5 = 1;
+        flagX++;
         console.log('X');
       }else{
         g5.classList.add('OPlayer');    
@@ -185,6 +191,7 @@ const render = lState =>  {
         g6.classList.add('XPlayer');    
         lState.currentPlayer = 1;
         sectX6 = 1;
+        flagX++;
         console.log('X');
       }else{
         g6.classList.add('OPlayer');    
@@ -204,6 +211,7 @@ const render = lState =>  {
         g7.classList.add('XPlayer');    
         lState.currentPlayer = 1;
         sectX7 = 1;
+        flagX++;
         console.log('X');
       }else{
         g7.classList.add('OPlayer');    
@@ -223,6 +231,7 @@ const render = lState =>  {
         g8.classList.add('XPlayer');    
         lState.currentPlayer = 1;
         sectX8 = 1;
+        flagX++;
         console.log('X');
       }else{
         g8.classList.add('OPlayer');    
@@ -242,6 +251,7 @@ const render = lState =>  {
         g9.classList.add('XPlayer');    
         lState.currentPlayer = 1;
         sectX9 = 1;
+        flagX++;
         console.log('X');
       }else{
         g9.classList.add('OPlayer');    
@@ -265,6 +275,9 @@ const render = lState =>  {
     if ((sectO1 == 1 && sectO2 == 1 && sectO3 == 1) || (sectO1 == 1 && sectO4 == 1 && sectO7 == 1) || (sectO7 == 1 && sectO5 == 1 && sectO3 == 1) || (sectO3 == 1 && sectO6 == 1 && sectO9 == 1) || (sectO7 == 1 && sectO8 == 1 && sectO9 == 1) || (sectO1 == 1 && sectO5 == 1 && sectO9 == 1) || (sectO4 == 1 && sectO5 == 1 && sectO6 == 1) || (sectO2 == 1 && sectO5 == 1 && sectO8 == 1)){
       alert('Player O is the winner');
       lState.win = true; 
+    }
+    if(flagX >= 5){
+      alert('Tie');
     }
   }
 
